@@ -6,6 +6,9 @@
     <title>Vet-cham</title>
         <link rel="icon" href="logo2.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Stack+Sans+Text:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="header">
@@ -19,14 +22,14 @@
     <div class="container" id="home">
         <div class="landing">
             <div class="text">
-                <img src="logo2.png" alt="logo" class="logo">
+                <img src="logo.png" alt="logo" class="logo">
                 <h1>Vet Cham</h1>
                 <p>Premium vaccines, feed additives, and pharmaceutical products for poultry and large animals.</p>
-                <button>Learn More</button>
+                <a href="#contact">Learn More</a>
             </div>
         </div>
         <div class="vaccines">
-            <h2>Vaccines</h2>
+            <h2 class="h2">Vaccines</h2>
             <div class="cards">
                 <div class="equipmnet" id="1">
                     <div class="front">                       
@@ -55,7 +58,7 @@
                     </div> 
                 </div>
             </div>
-            <h2>Feed Additives</h2>
+            <h2 class="h2">Feed Additives</h2>
             <div class="cards">
                 <div class="equipmnet" id="1">
                     <div class="front">                       
@@ -84,7 +87,7 @@
                     </div> 
                 </div>
             </div>
-            <h2>Pharmaceuticals Products</h2>
+            <h2 class="h2">Pharmaceuticals Products</h2>
             <div class="cards">
                 <div class="equipmnet" id="1">
                     <div class="front">                       
@@ -115,7 +118,7 @@
             </div>
         </div>
         <div class="vm">
-            <div class="vision">
+            <div class="vision" id="v">
                 <img src="doctors.png" class="hidden" alt="">
             <div class="text">
                 <h2>Our vision</h2>
@@ -132,7 +135,7 @@
         </div>
         </div>
         <div class="founders">
-            <h2>Founders</h2>
+            <h2 class="h2">Founders</h2>
             <div class="cards">
                 <div class="card">
                     <div class="img">
@@ -161,7 +164,7 @@
             </div>
         </div>
         <div class="contact" id="contact">
-        <h2>Contact Us</h2>
+        <h2 class="h2">Contact Us</h2>
         <div class="continer">
             <div class="content">
                 <form class="formRevealL" id="contact-form" onsubmit="sendMail(event)">
@@ -211,4 +214,3 @@
     <script src="main.js"></script>
 </body>
 </html>
-
