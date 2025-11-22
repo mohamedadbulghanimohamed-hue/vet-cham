@@ -1,0 +1,754 @@
+div {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  background-image: url(background1.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+.header {
+  width: 100%;
+  padding: 20px 70px;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+}
+.landing {
+  position: relative;
+}
+.header img {
+  width: 50px;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.header ul li {
+  margin-right: 30px;
+}
+.header ul li a {
+  color: #fff;
+}
+.header ul li:hover a {
+  color: #d6a75c;
+}
+.header ul li a.active {
+  color: #d6a75c;
+  position: relative;
+  font-weight: 700;
+}
+.header ul li a.active::before {
+  content: "";
+  background-color: #d6a75c;
+  height: 2px;
+  width: 18px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+.landing {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  text-align: center;
+}
+h1 {
+  font-size: 5em;
+  color: #fff;
+  margin: 15px 0;
+}
+.landing p {
+  color: #ddd;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.landing button {
+  background-color: rgb(16 138 95);;
+  color: #fff;
+  padding: 15px 35px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+}
+.landing button:hover {
+  background-color: #064064;
+}
+.landing .logo {
+  width: 100px;
+  transition: 1s;
+}
+.landing .move {
+  width: 40px;
+  opacity: 0;
+  transition: 1s;
+}
+.vaccines {
+  background-image: url(background2.png);
+  padding: 60px 80px;
+  text-align: center;
+}
+.vaccines h2 {
+  position: relative;
+  font-size: 3em;
+  margin: 0 auto 50px;
+  width: fit-content;
+  color: #014421;
+}
+
+.vaccines .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 40px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.vaccines .equipmnet {
+    border: 3px solid #d6a75c;
+    margin-bottom: 15px;
+    width: 550px;
+    height: 460px;
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    transition: transform .8s ease-in-out;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.vaccines .equipmnet:hover {
+    transform: rotateY(180deg);
+}
+.vaccines .front,
+.vaccines .back {
+    position: absolute;
+    width: calc(94% + 4px);
+    height: 93%;
+    padding: 15px;
+    backface-visibility: hidden;
+}
+.vaccines .front img {
+  width: 549px;
+  transform: translate(-15px, -15px);
+}
+.vaccines .front h3 {
+    color: rgb(52 102 84);
+    font-size: 3.6em;
+    margin-bottom: 5px;
+    margin-top: -8px;
+}
+.vaccines .back {
+    background-color: #d6a75c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transform: rotateY(180deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.vaccines .back h3 {
+    color: #fff;
+    font-size: 2.6em;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.vaccines .back p {
+  color: #ddd;
+  line-height: 1.2;
+}
+.vaccines .back a {
+  display: block;
+    font-size: 1.2em;
+    width: fit-content;
+    background-color: rgb(52 102 84);
+    color: #fff;
+    margin: 33px auto 0;
+    border-radius: 28px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.vaccines .back a:hover {
+  background-color: #014421;
+  transition: 0.3s;
+}
+
+.vision,
+.mision {
+  background-color: #014421;
+  padding: 40px 80px;
+  display: flex;
+  gap: 0 40px;
+  overflow: hidden;
+}
+.vision h2,
+.mision h2 {
+  font-size: 4em;
+    color: #fff;
+    margin: 0;
+}
+.vision p,
+.mision p {
+color: #eee;
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+.vision img,
+.mision img {
+  border: 5px solid #fff;
+  border-radius: 7px;
+  width: 500px;
+}
+.mision img {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1.5s;
+}
+.vision img {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1.5s;
+}
+.vision .both {
+  transform: translateX(0px);
+  opacity: 1;
+  transition: 1.5s;
+}
+.mision .both {
+  transform: translateX(0px);
+  opacity: 1;
+  transition: 1.5s;
+}
+
+.founders {
+  background-color: #fff;
+  padding: 60px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+.founders h2 {
+  position: relative;
+  font-size: 3em;
+  margin: 0 auto 80px;
+  border: 2px solid #014421;
+  width: fit-content;
+  padding: 15px 25px;
+}
+.founders h2::before{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #014421;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.founders h2::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #014421;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.founders .cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.founders .cards .card {
+  width: 350px;
+  border: 3px solid #014421;
+  border-radius: 10px;
+}
+.founders .cards .card:nth-child(1) {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1.5s;
+}
+.founders .cards .card:nth-child(2) {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1.5s;
+}
+.founders .cards .card:nth-child(3) {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1.5s;
+}
+.founders .cards .both:nth-child(1) {
+  transform: translateX(0px);
+  opacity: 1;
+  transition: 1.5s;
+}
+.founders .cards .both:nth-child(2) {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1.5s;
+}
+.founders .cards .both:nth-child(3) {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 1.5s;
+}
+.founders .cards .img {
+  width: 100%;
+  padding: 35px 0 20px;
+  background-color: #014421;
+}
+.founders img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.founders .cards .card h3 {
+  padding: 30px 0;
+  font-size: 2em;
+  color: #014421;
+}
+
+
+.contact {
+  padding: 40px 0;
+  background-color: #d6a75c;
+}
+.contact h2 {
+  position: relative;
+  font-size: 3em;
+  margin: 0 auto 80px;
+  border: 2px solid #014421;
+  width: fit-content;
+  padding: 15px 25px;
+}
+.contact h2::before{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #014421;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact h2::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #014421;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact .continer {
+  text-align: center;
+}
+.contact .content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.contact .info h4 {
+  font-size: 2em;
+  color: #014421;
+}
+.contact h3 {
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: #014421;
+  text-align: center;
+}
+.contact form {
+  border: 3px solid #014421;
+  padding: 20px 15px;
+  width: 400px;
+}
+.contact form input,
+.contact form textarea {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #000;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contact button {
+  background-color: #014421;
+  color: #fff;
+  padding: 13px 40px;
+  border: none;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+footer {
+  padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #014421;
+}
+.social {
+  margin-top: 40px;
+}
+.social img:hover {
+  transform: translateY(-7px);
+  transition: 0.5s;
+}
+.social img {
+  margin-right: 5px;
+  width: 20px;
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 767px) {
+  .vaccines {
+    padding: 40px 50px;
+  }
+  .vaccines .cards {
+    gap: 40px 0;
+  }
+  .vaccines .cards .front img {
+    width: 395px;
+  }
+  .vaccines .cards .front h3 {
+    margin-top: 30px;
+  }
+  .vision,
+  .mision {
+    gap: 40px 0;
+    padding: 30px 50px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .vision img:last-child {
+    display: none;
+  }
+  .vision img,
+  .mision img {
+    width: 400px;
+  }
+  .founders .cards {
+    gap: 50px 0;
+  }
+  .contact .content .info {
+    text-align: center;
+  }
+  .contact iframe {
+    width: 400px;
+    height: 300px;
+  }
+  .hidden {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+}
+/*
+.vaccines .circals .big {
+  position: relative;
+  background-image: url(background1.png);
+  box-sizing: border-box;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.vaccines .circals .big h3 {
+  color: #fff;
+  font-size: 3.3em;
+  font-weight: 800;
+} 
+.vaccines .circals .big::before {
+  content: "";
+  position: absolute;
+  width: 255px;
+  height: 11px;
+  background-color: #1aa694;
+  left: -255px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.vaccines .circals .big::after {
+  content: "";
+  position: absolute;
+  width: 255px;
+  height: 11px;
+  background-color: #1aa694;
+  right: -255px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.vaccines .circals .main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.vaccines .circals .main h3 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.vaccines .circals .main .left,
+.vaccines .circals .main .right {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+.vaccines .circals .main .left::before,
+.vaccines .circals .main .right::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 154px;
+  background-color: #1aa694;
+  left: 50%;
+  top: -155px;
+  transform: translatex(-50%);
+}
+.vaccines .circals .main .left > h4 {
+position: absolute;
+    top: 13px;
+    left: 29px;
+    font-size: 2.4em;
+    color: #fff;
+}
+.vaccines .circals .main .right > h4 {
+position: absolute;
+    top: -4px;
+    left: 26px;
+    font-size: 2.4em;
+    color: #fff;
+}
+.vaccines .circals .main .right::after {
+  content: "";
+  width: 11px;
+  height: 0px;
+  position: absolute;
+  transform: translatex(-50%);
+  left: 50%;
+  transition: 0.5s;
+  background-color: #1aa694;
+  bottom: 0px;
+}
+.vaccines .circals .main .spred::after {
+  height: 50px;
+  transition: 0.5s;
+  bottom: -50px;
+}
+.vaccines .circals .main img {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.vaccines .circals .main .bottom {
+  display: flex;
+  margin-top: 20px;
+  position: relative;
+}
+.vaccines .circals .main .left .bottom .one h4 {
+  position: absolute;
+  top: 20px;
+  left: 21px;
+  color: #fff;
+  font-size: 1.4em;
+}
+.vaccines .circals .main .left .bottom .two h4 {
+  position: absolute;
+  top: 18px;
+  left: 32px;
+  color: #fff;
+  font-size: 1.4em;
+}
+.vaccines .circals .main .right .bottom .one h4 {
+  position: absolute;
+  top: -4px;
+  left: 22px;
+  color: #fff;
+  font-size: 1.4em;
+}
+.vaccines .circals .main .right .bottom .two h4 {
+  position: absolute;
+  top: 9px;
+  left: 13px;
+  color: #fff;
+  font-size: 1.4em;
+}
+.vaccines .circals .main .right .bottom .four h4 {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  color: #fff;
+  font-size: 1.2em;
+}
+.vaccines .circals .main .right .bottom .three h4 {
+  position: absolute;
+  top: -3px;
+  left: 20px;
+  color: #fff;
+  font-size: 1.4em;
+}
+.vaccines .circals .main .left .bottom::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 0;
+  background-color: #1aa694;
+  left: 0;
+  bottom: 164px;
+  transition: 0.5s;
+  transform: translatex(-50%) rotate(45deg);
+}
+.vaccines .circals .main .spred .bottom::before{
+  height: 78px;
+  bottom: 104px;
+  transition: 0.5s;
+}
+.vaccines .circals .main .left .bottom::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 0px;
+  background-color: #1aa694;
+  right: -3px;
+  bottom: 161px;
+  transition: 0.5s;
+  transform: translatex(-50%) rotate(-35deg);
+}
+.vaccines .circals .main .spred .bottom::after {
+  height: 75px;
+  transition: 0.5s;
+  bottom: 101px;
+}
+.vaccines .main .left .bottom .one {
+  transform: translateX(-100px);
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  transition: 0.5s;
+  position: relative;
+  border-radius: 50%;
+}
+.vaccines .circals .main .spred .bottom .one {
+  transition: 0.5s;
+  opacity: 1;
+}
+.vaccines .main .left .bottom .two {
+  transform: translateX(50px);
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  transition: 0.5s;
+  position: relative;
+  border-radius: 50%;
+}
+.vaccines .circals .main .spred .bottom .two {
+  transition: 0.5s;
+  opacity: 1;
+}
+.vaccines .circals .main .bottom img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.vaccines .main .right .bottom {
+  gap: 0 50px;
+  position: relative;
+  margin-top: 125px;
+  transform: translateX(-180px);
+}
+.vaccines .circals .main .right .bottom::after {
+  content: "";
+    position: absolute;
+    width: 0px;
+    height: 11px;
+    background-color: #1aa694;
+    left: 275px;
+    top: -80px;
+    transform: translatex(-50%);
+    transition: 0.5s;
+}
+.vaccines .circals .main .right.spred .bottom::after {
+  width: 458px;
+  transition: 0.5s;
+}
+.vaccines .circals .main .right .bottom .one,
+.vaccines .circals .main .right .bottom .two,
+.vaccines .circals .main .right .bottom .three,
+.vaccines .circals .main .right .bottom .four {
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+}
+.vaccines .circals .main .spred .bottom .one,
+.vaccines .circals .main .spred .bottom .two,
+.vaccines .circals .main .spred .bottom .three,
+.vaccines .circals .main .spred .bottom .four {
+  position: relative;
+  opacity: 1;
+  transition: 0.5s;
+}
+.vaccines .circals .main .right .bottom .one::before,
+.vaccines .circals .main .right .bottom .two::before,
+.vaccines .circals .main .right .bottom .three::before,
+.vaccines .circals .main .right .bottom .four::before {
+  content: "";
+    position: absolute;
+    width: 11px;
+    height: 0px;
+    background-color: #1aa694;
+    left: 50%;
+    transition: 0.5s;
+    transform: translateX(-50%);
+    top: -80px;
+}
+.vaccines .circals .main .spred .bottom .one::before,
+.vaccines .circals .main .spred .bottom .two::before,
+.vaccines .circals .main .spred .bottom .three::before,
+.vaccines .circals .main .spred .bottom .four::before {
+  transition: 0.5s;
+  height: 80px;
+}
+.vaccines .main .right .bottom img {
+  width: 100px;
+  height: 100px;
+}
+*/
