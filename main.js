@@ -46,12 +46,17 @@ founders.forEach(founder => {
     observer.observe(founder);
 });
 
+const h2 = document.querySelectorAll(".h2");
 
-
-/*
-function spredLeft() {
-    document.querySelector(".vaccines .left").classList.toggle("spred");
-};
-function spredRight() {
-    document.querySelector(".vaccines .right").classList.toggle("spred");
-}; */
+const observer3 = new IntersectionObserver((entries) => {
+    for (let i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+            entries[i].target.classList.add("both");
+        }else {
+            entries[i].target.classList.remove("both");
+        }
+    };
+});
+h2.forEach(founder => {
+    observer.observe(founder);
+});
