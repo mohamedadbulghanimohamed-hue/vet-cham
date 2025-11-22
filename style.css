@@ -107,7 +107,7 @@ h1 {
   transition: 1s;
 }
 .vaccines {
-  background-image: url(background2.png);
+  background-image: url(background2.jpg);
   padding: 60px 80px;
   text-align: center;
 }
@@ -592,4 +592,5 @@ h2.both {
 @media (min-width: 768px) and (max-width: 1024px) {
   
 }
+
 
